@@ -4,11 +4,15 @@ namespace Api;
 
 require get_template_directory() . "/api/resources/views/home/home.php";
 require dirname(__DIR__) . "/api/resources/views/terapeutic_number/teraupetic_number.php";
+require dirname(__DIR__) . "/api/resources/views/products/products.php";
+require dirname(__DIR__) . "/api/resources/views/aliados/aliados.php";
 require get_template_directory() . "/api/routes/api.php";
 require get_template_directory() . "/api/routes/web.php";
 
 use Api\Resources\Views\Home;
+use Api\Resources\Views\Products;
 use Api\Resources\Views\TerapeuticNumber;
+use Api\Resources\Views\Aliados;
 use Api\Routes;
 use Api\RoutesWeb;
 
@@ -19,6 +23,8 @@ class Api
      */
     public $home = null;
     public $terapeutic_number = null;
+    public $products = null;
+    public $aliados = null;
     public $routes = null;
     public $webRoutes = null;
 
@@ -32,6 +38,8 @@ class Api
 
         $this->home = new Home();
         $this->terapeutic_number = new TerapeuticNumber();
+        $this->products = new Products();
+        $this->aliados = new Aliados();
         $this->routes = new Routes();
         $this->webRoutes = new RoutesWeb();
     }
@@ -67,6 +75,26 @@ class Api
             "terapeutic_number_content_admin",
             array($this->terapeutic_number, "TerapeuticNumberView"),
             2
+        );
+
+        add_submenu_page(
+            "content_admin",
+            "Productos - Administrador de contenido | Api Praxis",
+            "Productos",
+            "manage_options",
+            "Products_content_admin",
+            array($this->products, "productsView"),
+            2
+        );
+
+        add_submenu_page(
+            "content_admin",
+            "Aliados - Administrador de contenido | Api Praxis",
+            "Aliados",
+            "manage_options",
+            "Aliados_content_admin",
+            array($this->aliados, "AliadosView"),
+            4
         );
     }
 }
