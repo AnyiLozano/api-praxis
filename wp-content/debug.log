@@ -249,3 +249,4 @@ Stack trace:
 [07-Mar-2022 17:40:11 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object in C:\laragon\www\api-praxis\wp-includes\class-wp-hook.php on line 307
 [07-Mar-2022 17:40:15 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object in C:\laragon\www\api-praxis\wp-includes\class-wp-hook.php on line 307
 [07-Mar-2022 17:40:55 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object in C:\laragon\www\api-praxis\wp-includes\class-wp-hook.php on line 307
+[09-Mar-2022 03:28:24 UTC] PHP Notice:  Undefined property: WP_REST_Request::$content in C:\laragon\www\api-praxis\wp-content\themes\twentytwentyone\api\app\http\controllers\TerapeuticNumber.php on line 27

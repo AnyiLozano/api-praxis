@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\ContentPage;
 
-class TerapeuticNumberController extends Controller {
+class TerapeuticNumberController extends Controller
+{
     /**
      * This function is used from get all data of home in the db.
      * @return array with the data obtained.
@@ -23,7 +24,7 @@ class TerapeuticNumberController extends Controller {
             $contentHome->type_content_id = $request["type"];
             $contentHome->section = $request["section"];
             if ($request['type'] == 1) {
-                $contentHome->content = $request->content;
+                $contentHome->content = $request["content"];
             } else {
                 $contentHome->content = $this->uploadImages($request->get_file_params("content")["content"]);
             }
