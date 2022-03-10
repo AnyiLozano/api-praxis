@@ -320,7 +320,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=348 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=349 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Volcando datos para la tabla praxis.wp_options: ~157 rows (aproximadamente)
 DELETE FROM `wp_options`;
@@ -430,7 +430,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 	(102, 'WPLANG', 'es_CO', 'yes'),
 	(103, 'widget_block', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(104, 'sidebars_widgets', 'a:3:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:5:{i:0;s:7:"block-2";i:1;s:7:"block-3";i:2;s:7:"block-4";i:3;s:7:"block-5";i:4;s:7:"block-6";}s:13:"array_version";i:3;}', 'yes'),
-	(105, 'cron', 'a:6:{i:1646882013;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1646896413;a:4:{s:18:"wp_https_detection";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1646939613;a:2:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939629;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939630;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+	(105, 'cron', 'a:6:{i:1646885613;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1646896413;a:4:{s:18:"wp_https_detection";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1646939613;a:2:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939629;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939630;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 	(106, 'widget_pages', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(107, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(108, 'widget_archives', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
@@ -499,9 +499,9 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=321 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=323 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_postmeta: ~297 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_postmeta: ~299 rows (aproximadamente)
 DELETE FROM `wp_postmeta`;
 /*!40000 ALTER TABLE `wp_postmeta` DISABLE KEYS */;
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -801,7 +801,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 	(317, 129, '_wp_attached_file', '2022/03/cuidar.png'),
 	(318, 129, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1201;s:6:"height";i:507;s:4:"file";s:18:"2022/03/cuidar.png";s:5:"sizes";a:4:{s:6:"medium";a:4:{s:4:"file";s:18:"cuidar-300x127.png";s:5:"width";i:300;s:6:"height";i:127;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:19:"cuidar-1024x432.png";s:5:"width";i:1024;s:6:"height";i:432;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:18:"cuidar-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:18:"cuidar-768x324.png";s:5:"width";i:768;s:6:"height";i:324;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 	(319, 130, '_wp_attached_file', '2022/03/pepe.png'),
-	(320, 130, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1200;s:6:"height";i:955;s:4:"file";s:16:"2022/03/pepe.png";s:5:"sizes";a:4:{s:6:"medium";a:4:{s:4:"file";s:16:"pepe-300x239.png";s:5:"width";i:300;s:6:"height";i:239;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:17:"pepe-1024x815.png";s:5:"width";i:1024;s:6:"height";i:815;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:16:"pepe-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:16:"pepe-768x611.png";s:5:"width";i:768;s:6:"height";i:611;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
+	(320, 130, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1200;s:6:"height";i:955;s:4:"file";s:16:"2022/03/pepe.png";s:5:"sizes";a:4:{s:6:"medium";a:4:{s:4:"file";s:16:"pepe-300x239.png";s:5:"width";i:300;s:6:"height";i:239;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:17:"pepe-1024x815.png";s:5:"width";i:1024;s:6:"height";i:815;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:16:"pepe-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:16:"pepe-768x611.png";s:5:"width";i:768;s:6:"height";i:611;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(321, 131, '_wp_attached_file', '2022/03/referencias.png'),
+	(322, 131, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1920;s:6:"height";i:482;s:4:"file";s:23:"2022/03/referencias.png";s:5:"sizes";a:6:{s:6:"medium";a:4:{s:4:"file";s:22:"referencias-300x75.png";s:5:"width";i:300;s:6:"height";i:75;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:24:"referencias-1024x257.png";s:5:"width";i:1024;s:6:"height";i:257;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:23:"referencias-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:23:"referencias-768x193.png";s:5:"width";i:768;s:6:"height";i:193;s:9:"mime-type";s:9:"image/png";}s:9:"1536x1536";a:4:{s:4:"file";s:24:"referencias-1536x386.png";s:5:"width";i:1536;s:6:"height";i:386;s:9:"mime-type";s:9:"image/png";}s:14:"post-thumbnail";a:4:{s:4:"file";s:24:"referencias-1568x394.png";s:5:"width";i:1568;s:6:"height";i:394;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.wp_posts
@@ -835,9 +837,9 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_posts: ~123 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_posts: ~124 rows (aproximadamente)
 DELETE FROM `wp_posts`;
 /*!40000 ALTER TABLE `wp_posts` DISABLE KEYS */;
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -963,7 +965,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 	(127, 0, '2022-03-09 21:31:42', '2022-03-10 02:31:42', '', 'dolor', '', 'inherit', 'open', 'closed', '', 'dolor', '', '', '2022-03-09 21:31:42', '2022-03-10 02:31:42', '', 0, 'http://api-praxis.test/dolor/', 0, 'attachment', 'image/png', 0),
 	(128, 0, '2022-03-09 21:33:21', '2022-03-10 02:33:21', '', 'sintomas', '', 'inherit', 'open', 'closed', '', 'sintomas', '', '', '2022-03-09 21:33:21', '2022-03-10 02:33:21', '', 0, 'http://api-praxis.test/sintomas/', 0, 'attachment', 'image/png', 0),
 	(129, 0, '2022-03-09 21:34:12', '2022-03-10 02:34:12', '', 'cuidar', '', 'inherit', 'open', 'closed', '', 'cuidar', '', '', '2022-03-09 21:34:12', '2022-03-10 02:34:12', '', 0, 'http://api-praxis.test/cuidar/', 0, 'attachment', 'image/png', 0),
-	(130, 0, '2022-03-09 22:12:20', '2022-03-10 03:12:20', '', 'pepe', '', 'inherit', 'open', 'closed', '', 'pepe', '', '', '2022-03-09 22:12:20', '2022-03-10 03:12:20', '', 0, 'http://api-praxis.test/pepe/', 0, 'attachment', 'image/png', 0);
+	(130, 0, '2022-03-09 22:12:20', '2022-03-10 03:12:20', '', 'pepe', '', 'inherit', 'open', 'closed', '', 'pepe', '', '', '2022-03-09 22:12:20', '2022-03-10 03:12:20', '', 0, 'http://api-praxis.test/pepe/', 0, 'attachment', 'image/png', 0),
+	(131, 0, '2022-03-09 22:14:10', '2022-03-10 03:14:10', '', 'referencias', '', 'inherit', 'open', 'closed', '', 'referencias-2', '', '', '2022-03-09 22:14:10', '2022-03-10 03:14:10', '', 0, 'http://api-praxis.test/referencias-2/', 0, 'attachment', 'image/png', 0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.wp_termmeta
