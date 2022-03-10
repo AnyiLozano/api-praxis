@@ -37,9 +37,9 @@ CREATE TABLE IF NOT EXISTS `content_pages` (
   CONSTRAINT `content_pages_page_id_foreign` FOREIGN KEY (`page_id`) REFERENCES `pages` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `content_pages_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `statuses` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `content_pages_type_content_id_foreign` FOREIGN KEY (`type_content_id`) REFERENCES `type_contents` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla praxis.content_pages: ~27 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.content_pages: ~28 rows (aproximadamente)
 DELETE FROM `content_pages`;
 /*!40000 ALTER TABLE `content_pages` DISABLE KEYS */;
 INSERT INTO `content_pages` (`id`, `page_id`, `type_content_id`, `content`, `alt`, `section`, `status_id`, `created_at`, `updated_at`) VALUES
@@ -68,7 +68,9 @@ INSERT INTO `content_pages` (`id`, `page_id`, `type_content_id`, `content`, `alt
 	(29, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/recomendation.png', 'prueba3', 'Heridas-recomendation', 1, '2022-03-09 20:17:05', '2022-03-09 20:20:16'),
 	(30, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/CuraciÃ³n.png', 'prueba4', 'heridas-lavado-image', 1, '2022-03-09 20:56:03', '2022-03-09 23:59:52'),
 	(32, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/recordatorio.png', 'prueba5', 'heridas-recordatorio', 1, '2022-03-09 21:10:24', '2022-03-09 21:10:24'),
-	(33, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/Heridas-text1.png', 'prueba6', 'heridas-lavado-text', 1, '2022-03-09 21:31:01', '2022-03-09 21:31:01');
+	(33, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/Heridas-text1.png', 'prueba6', 'heridas-lavado-text', 1, '2022-03-09 21:31:01', '2022-03-09 21:31:01'),
+	(34, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/atender.png', ' Â¿CÃ³mo atender a una persona herida?', 'persona_herida', 1, '2022-03-10 00:04:45', '2022-03-10 00:04:45'),
+	(35, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/referncias.png', 'referencias', 'referencias_banner', 1, '2022-03-10 00:06:23', '2022-03-10 00:06:23');
 /*!40000 ALTER TABLE `content_pages` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.failed_jobs
@@ -471,9 +473,9 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=277 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=281 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_postmeta: ~250 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_postmeta: ~254 rows (aproximadamente)
 DELETE FROM `wp_postmeta`;
 /*!40000 ALTER TABLE `wp_postmeta` DISABLE KEYS */;
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -729,7 +731,11 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 	(273, 107, '_wp_attached_file', '2022/03/Heridas-text1.png'),
 	(274, 107, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:490;s:6:"height";i:204;s:4:"file";s:25:"2022/03/Heridas-text1.png";s:5:"sizes";a:2:{s:6:"medium";a:4:{s:4:"file";s:25:"Heridas-text1-300x125.png";s:5:"width";i:300;s:6:"height";i:125;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:25:"Heridas-text1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 	(275, 108, '_wp_attached_file', '2022/03/Curación.png'),
-	(276, 108, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:438;s:6:"height";i:350;s:4:"file";s:21:"2022/03/Curación.png";s:5:"sizes";a:2:{s:6:"medium";a:4:{s:4:"file";s:21:"Curación-300x240.png";s:5:"width";i:300;s:6:"height";i:240;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:21:"Curación-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
+	(276, 108, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:438;s:6:"height";i:350;s:4:"file";s:21:"2022/03/Curación.png";s:5:"sizes";a:2:{s:6:"medium";a:4:{s:4:"file";s:21:"Curación-300x240.png";s:5:"width";i:300;s:6:"height";i:240;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:21:"Curación-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(277, 109, '_wp_attached_file', '2022/03/atender.png'),
+	(278, 109, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1099;s:6:"height";i:320;s:4:"file";s:19:"2022/03/atender.png";s:5:"sizes";a:4:{s:6:"medium";a:4:{s:4:"file";s:18:"atender-300x87.png";s:5:"width";i:300;s:6:"height";i:87;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:20:"atender-1024x298.png";s:5:"width";i:1024;s:6:"height";i:298;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:19:"atender-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:19:"atender-768x224.png";s:5:"width";i:768;s:6:"height";i:224;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(279, 110, '_wp_attached_file', '2022/03/referncias.png'),
+	(280, 110, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1200;s:6:"height";i:482;s:4:"file";s:22:"2022/03/referncias.png";s:5:"sizes";a:4:{s:6:"medium";a:4:{s:4:"file";s:22:"referncias-300x121.png";s:5:"width";i:300;s:6:"height";i:121;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:23:"referncias-1024x411.png";s:5:"width";i:1024;s:6:"height";i:411;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:22:"referncias-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:22:"referncias-768x308.png";s:5:"width";i:768;s:6:"height";i:308;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.wp_posts
@@ -763,9 +769,9 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_posts: ~98 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_posts: ~100 rows (aproximadamente)
 DELETE FROM `wp_posts`;
 /*!40000 ALTER TABLE `wp_posts` DISABLE KEYS */;
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -869,7 +875,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 	(105, 0, '2022-03-09 16:14:42', '2022-03-09 21:14:42', '', 'Recurso 4', '', 'inherit', 'open', 'closed', '', 'recurso-4-3', '', '', '2022-03-09 16:14:42', '2022-03-09 21:14:42', '', 0, 'http://api-praxis.test/recurso-4-3/', 0, 'attachment', 'image/png', 0),
 	(106, 0, '2022-03-09 16:15:05', '2022-03-09 21:15:05', '', 'lavado1', '', 'inherit', 'open', 'closed', '', 'lavado1', '', '', '2022-03-09 16:15:05', '2022-03-09 21:15:05', '', 0, 'http://api-praxis.test/lavado1/', 0, 'attachment', 'image/png', 0),
 	(107, 0, '2022-03-09 16:31:01', '2022-03-09 21:31:01', '', 'Heridas-text1', '', 'inherit', 'open', 'closed', '', 'heridas-text1', '', '', '2022-03-09 16:31:01', '2022-03-09 21:31:01', '', 0, 'http://api-praxis.test/heridas-text1/', 0, 'attachment', 'image/png', 0),
-	(108, 0, '2022-03-09 18:59:51', '2022-03-09 23:59:51', '', 'Curación', '', 'inherit', 'open', 'closed', '', 'curacion', '', '', '2022-03-09 18:59:51', '2022-03-09 23:59:51', '', 0, 'http://api-praxis.test/curacion/', 0, 'attachment', 'image/png', 0);
+	(108, 0, '2022-03-09 18:59:51', '2022-03-09 23:59:51', '', 'Curación', '', 'inherit', 'open', 'closed', '', 'curacion', '', '', '2022-03-09 18:59:51', '2022-03-09 23:59:51', '', 0, 'http://api-praxis.test/curacion/', 0, 'attachment', 'image/png', 0),
+	(109, 0, '2022-03-09 19:04:44', '2022-03-10 00:04:44', '', 'atender', '', 'inherit', 'open', 'closed', '', 'atender', '', '', '2022-03-09 19:04:44', '2022-03-10 00:04:44', '', 0, 'http://api-praxis.test/atender/', 0, 'attachment', 'image/png', 0),
+	(110, 0, '2022-03-09 19:06:23', '2022-03-10 00:06:23', '', 'referncias', '', 'inherit', 'open', 'closed', '', 'referncias', '', '', '2022-03-09 19:06:23', '2022-03-10 00:06:23', '', 0, 'http://api-praxis.test/referncias/', 0, 'attachment', 'image/png', 0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.wp_termmeta
