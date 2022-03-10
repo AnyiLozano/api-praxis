@@ -66,8 +66,7 @@ INSERT INTO `content_pages` (`id`, `page_id`, `type_content_id`, `content`, `alt
 	(27, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/Necrotico.png', 'prueba', 'Heridas-tipo1-imagen', 1, '2022-03-09 15:50:50', '2022-03-09 15:50:50'),
 	(28, 2, 1, 'NecrÃ³tico: tejido negro que puede estar hÃºmedo o seco. Normalmente es el tejido al que se le llama escara y no es bueno para la lesiÃ³n. Bajo este tejido, su lesiÃ³n puede o no tener profundidad. ', 'prueba2', 'Heridas-tipo1-imagen', 1, '2022-03-09 15:51:38', '2022-03-09 15:51:38'),
 	(29, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/recomendation.png', 'prueba3', 'Heridas-recomendation', 1, '2022-03-09 20:17:05', '2022-03-09 20:20:16'),
-	(30, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/lavado1.png', 'prueba4', 'heridas-lavado-image', 1, '2022-03-09 20:56:03', '2022-03-09 21:30:28'),
-	(31, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/recordatorio.png', 'prueba5', 'heridas-recordatorio', 1, '2022-03-09 21:05:22', '2022-03-09 21:05:22'),
+	(30, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/CuraciÃ³n.png', 'prueba4', 'heridas-lavado-image', 1, '2022-03-09 20:56:03', '2022-03-09 23:59:52'),
 	(32, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/recordatorio.png', 'prueba5', 'heridas-recordatorio', 1, '2022-03-09 21:10:24', '2022-03-09 21:10:24'),
 	(33, 2, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/Heridas-text1.png', 'prueba6', 'heridas-lavado-text', 1, '2022-03-09 21:31:01', '2022-03-09 21:31:01');
 /*!40000 ALTER TABLE `content_pages` ENABLE KEYS */;
@@ -125,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   CONSTRAINT `pages_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `statuses` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla praxis.pages: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.pages: ~0 rows (aproximadamente)
 DELETE FROM `pages`;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 INSERT INTO `pages` (`id`, `name`, `status_id`, `created_at`, `updated_at`) VALUES
@@ -253,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
   KEY `comment_author_email` (`comment_author_email`(10))
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_comments: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_comments: ~0 rows (aproximadamente)
 DELETE FROM `wp_comments`;
 /*!40000 ALTER TABLE `wp_comments` DISABLE KEYS */;
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -295,9 +294,9 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=343 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=344 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_options: ~158 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_options: ~159 rows (aproximadamente)
 DELETE FROM `wp_options`;
 /*!40000 ALTER TABLE `wp_options` DISABLE KEYS */;
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -405,7 +404,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 	(102, 'WPLANG', 'es_CO', 'yes'),
 	(103, 'widget_block', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(104, 'sidebars_widgets', 'a:3:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:5:{i:0;s:7:"block-2";i:1;s:7:"block-3";i:2;s:7:"block-4";i:3;s:7:"block-5";i:4;s:7:"block-6";}s:13:"array_version";i:3;}', 'yes'),
-	(105, 'cron', 'a:6:{i:1646864013;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1646896413;a:4:{s:18:"wp_https_detection";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1646939613;a:2:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939629;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939630;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+	(105, 'cron', 'a:6:{i:1646871213;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1646896413;a:4:{s:18:"wp_https_detection";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1646939613;a:2:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939629;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1646939630;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 	(106, 'widget_pages', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(107, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(108, 'widget_archives', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
@@ -472,9 +471,9 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=275 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=277 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_postmeta: ~251 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_postmeta: ~250 rows (aproximadamente)
 DELETE FROM `wp_postmeta`;
 /*!40000 ALTER TABLE `wp_postmeta` DISABLE KEYS */;
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -728,7 +727,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 	(271, 106, '_wp_attached_file', '2022/03/lavado1.png'),
 	(272, 106, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1200;s:6:"height";i:350;s:4:"file";s:19:"2022/03/lavado1.png";s:5:"sizes";a:4:{s:6:"medium";a:4:{s:4:"file";s:18:"lavado1-300x88.png";s:5:"width";i:300;s:6:"height";i:88;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:20:"lavado1-1024x299.png";s:5:"width";i:1024;s:6:"height";i:299;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:19:"lavado1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:19:"lavado1-768x224.png";s:5:"width";i:768;s:6:"height";i:224;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 	(273, 107, '_wp_attached_file', '2022/03/Heridas-text1.png'),
-	(274, 107, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:490;s:6:"height";i:204;s:4:"file";s:25:"2022/03/Heridas-text1.png";s:5:"sizes";a:2:{s:6:"medium";a:4:{s:4:"file";s:25:"Heridas-text1-300x125.png";s:5:"width";i:300;s:6:"height";i:125;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:25:"Heridas-text1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
+	(274, 107, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:490;s:6:"height";i:204;s:4:"file";s:25:"2022/03/Heridas-text1.png";s:5:"sizes";a:2:{s:6:"medium";a:4:{s:4:"file";s:25:"Heridas-text1-300x125.png";s:5:"width";i:300;s:6:"height";i:125;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:25:"Heridas-text1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(275, 108, '_wp_attached_file', '2022/03/Curación.png'),
+	(276, 108, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:438;s:6:"height";i:350;s:4:"file";s:21:"2022/03/Curación.png";s:5:"sizes";a:2:{s:6:"medium";a:4:{s:4:"file";s:21:"Curación-300x240.png";s:5:"width";i:300;s:6:"height";i:240;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:21:"Curación-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.wp_posts
@@ -762,9 +763,9 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_posts: ~100 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_posts: ~98 rows (aproximadamente)
 DELETE FROM `wp_posts`;
 /*!40000 ALTER TABLE `wp_posts` DISABLE KEYS */;
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -867,7 +868,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 	(104, 0, '2022-03-09 16:10:22', '2022-03-09 21:10:22', '', 'recordatorio', '', 'inherit', 'open', 'closed', '', 'recordatorio-2', '', '', '2022-03-09 16:10:22', '2022-03-09 21:10:22', '', 0, 'http://api-praxis.test/recordatorio-2/', 0, 'attachment', 'image/png', 0),
 	(105, 0, '2022-03-09 16:14:42', '2022-03-09 21:14:42', '', 'Recurso 4', '', 'inherit', 'open', 'closed', '', 'recurso-4-3', '', '', '2022-03-09 16:14:42', '2022-03-09 21:14:42', '', 0, 'http://api-praxis.test/recurso-4-3/', 0, 'attachment', 'image/png', 0),
 	(106, 0, '2022-03-09 16:15:05', '2022-03-09 21:15:05', '', 'lavado1', '', 'inherit', 'open', 'closed', '', 'lavado1', '', '', '2022-03-09 16:15:05', '2022-03-09 21:15:05', '', 0, 'http://api-praxis.test/lavado1/', 0, 'attachment', 'image/png', 0),
-	(107, 0, '2022-03-09 16:31:01', '2022-03-09 21:31:01', '', 'Heridas-text1', '', 'inherit', 'open', 'closed', '', 'heridas-text1', '', '', '2022-03-09 16:31:01', '2022-03-09 21:31:01', '', 0, 'http://api-praxis.test/heridas-text1/', 0, 'attachment', 'image/png', 0);
+	(107, 0, '2022-03-09 16:31:01', '2022-03-09 21:31:01', '', 'Heridas-text1', '', 'inherit', 'open', 'closed', '', 'heridas-text1', '', '', '2022-03-09 16:31:01', '2022-03-09 21:31:01', '', 0, 'http://api-praxis.test/heridas-text1/', 0, 'attachment', 'image/png', 0),
+	(108, 0, '2022-03-09 18:59:51', '2022-03-09 23:59:51', '', 'Curación', '', 'inherit', 'open', 'closed', '', 'curacion', '', '', '2022-03-09 18:59:51', '2022-03-09 23:59:51', '', 0, 'http://api-praxis.test/curacion/', 0, 'attachment', 'image/png', 0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.wp_termmeta
@@ -983,7 +985,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   KEY `meta_key` (`meta_key`(191))
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_usermeta: ~23 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_usermeta: ~22 rows (aproximadamente)
 DELETE FROM `wp_usermeta`;
 /*!40000 ALTER TABLE `wp_usermeta` DISABLE KEYS */;
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -1031,7 +1033,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
   KEY `user_email` (`user_email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_users: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_users: ~0 rows (aproximadamente)
 DELETE FROM `wp_users`;
 /*!40000 ALTER TABLE `wp_users` DISABLE KEYS */;
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
