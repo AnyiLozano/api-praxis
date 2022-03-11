@@ -13,6 +13,7 @@ class ProductsController extends Controller
             "epiprot" => $this->epiprotContent(),
             "bulcosan" => $this->bulcosanContent(),
             "proctokinasa" => $this->proctokinasaContent(),
+            "cuidadores" => $this->pacientesContent()
         );
 
         return $this->response(true, ['type' => 'success', 'content' => 'Done.'], $productsContent);
@@ -167,5 +168,90 @@ class ProductsController extends Controller
             "references" => $references
         );
         return $bulcosanArray;
+    }
+
+    public function pacientesContent()
+    {
+        $banner_principal = ContentPage::where("section", "aliados_imagen_1")->whereStatusId(1)->first();
+        $principal = ContentPage::where("section", "banner_aliados_1")->whereStatusId(1)->first();
+        $title_clasification = ContentPage::where("section", "aliados_titulo_1")->whereStatusId(1)->first();
+        $text_clasification = ContentPage::where("section", "aliados_texto_1")->whereStatusId(1)->first();
+        $tultis = ContentPage::where("section", "LIKE", "%aliados_tultis%")->whereStatusId(1)->get();
+        $title_why = ContentPage::where("section", "aliados_titulo_2")->whereStatusId(1)->first();
+        $aliados_titulo_3 = ContentPage::where("section", "aliados_titulo_3")->whereStatusId(1)->first();
+        $aliados_texto_3 = ContentPage::where("section", "aliados_texto_3")->whereStatusId(1)->first();
+        $text_why = ContentPage::where("section", "aliados_texto_2")->whereStatusId(1)->first();
+        $aliados_imagen_2 = ContentPage::where("section", "aliados_imagen_2")->whereStatusId(1)->first();
+        $aliados_titulo_4 = ContentPage::where("section", "aliados_titulo_4")->whereStatusId(1)->first();
+        $aliados_texto_4 = ContentPage::where("section", "aliados_texto_4")->whereStatusId(1)->first();
+        $aliados_background_1 = ContentPage::where("section", "aliados_background_1")->whereStatusId(1)->first();
+        $aliados_titulo_5 = ContentPage::where("section", "aliados_titulo_5")->whereStatusId(1)->first();
+        $aliados_imagen_3 = ContentPage::where("section", "aliados_imagen_3")->whereStatusId(1)->first();
+        $aliados_imagen_4 = ContentPage::where("section", "aliados_imagen_4")->whereStatusId(1)->first();
+        $aliados_imagen_5 = ContentPage::where("section", "aliados_imagen_5")->whereStatusId(1)->first();
+        $artesanalBackground = ContentPage::where("section", "fondso_salud")->whereStatusId(1)->first();
+        $Titulo_1 = ContentPage::where("section", "Titulo_1")->whereStatusId(1)->first();
+        $fondso_salud = ContentPage::where("section", "fondso_salud")->whereStatusId(1)->first();
+        $banner_video = ContentPage::where("section", "banner_video")->whereStatusId(1)->first();
+        $text_factores = ContentPage::where("section", "text_factores")->whereStatusId(1)->first();
+        $ancestral_slider_ = ContentPage::where("section", "ancestral_slider_")->whereStatusId(1)->first();
+        $ancestral_slider_99 = ContentPage::where("section", "ancestral_slider_99")->whereStatusId(1)->first();
+        $evidencia_cientificac = ContentPage::where("section", "evidencia_cientificac")->whereStatusId(1)->first();
+        $artesanal_title = ContentPage::where("section", "artesanal-title")->whereStatusId(1)->first();
+        
+        $newArray = [
+            [
+                "image" => ContentPage::where("section", "ancestral_slider_1")->whereStatusId(1)->first()["content"],
+                "text" => ContentPage::where("section", "ancestral_imagen_1")->whereStatusId(1)->first()["content"]
+            ],
+            [
+                "image" => ContentPage::where("section", "ancestral_slider_2")->whereStatusId(1)->first()["content"],
+                "text" => ContentPage::where("section", "ancestral_imagen_2")->whereStatusId(1)->first()["content"]
+            ],
+            [
+                "image" => ContentPage::where("section", "ancestral_slider_3")->whereStatusId(1)->first()["content"],
+                "text" => ContentPage::where("section", "ancestral_imagen_3")->whereStatusId(1)->first()["content"]
+            ],
+            [
+                "image" => ContentPage::where("section", "ancestral_slider_4")->whereStatusId(1)->first()["content"],
+                "text" => ContentPage::where("section", "ancestral_imagen_4")->whereStatusId(1)->first()["content"]
+            ],
+            [
+                "image" => ContentPage::where("section", "ancestral_slider_5")->whereStatusId(1)->first()["content"],
+                "text" => ContentPage::where("section", "ancestral_imagen_5")->whereStatusId(1)->first()["content"]
+            ]
+        ];
+
+        $pacientesContent = array(
+            "banner_principal" => $banner_principal,
+            "principal" => $principal,
+            "title_clasification" => $title_clasification,
+            "text_clasification" => $text_clasification,
+            "tultis" => $tultis,
+            "title_why" => $title_why,
+            "text_why" => $text_why,
+            "aliados_titulo_3" => $aliados_titulo_3,
+            "aliados_texto_3" => $aliados_texto_3,
+            "aliados_imagen_2" => $aliados_imagen_2,
+            "aliados_titulo_4" => $aliados_titulo_4,
+            "aliados_texto_4" => $aliados_texto_4,
+            "aliados_background_1" => $aliados_background_1,
+            "aliados_titulo_5" => $aliados_titulo_5,
+            "aliados_imagen_3" => $aliados_imagen_3,
+            "aliados_imagen_4" => $aliados_imagen_4,
+            "aliados_imagen_5" => $aliados_imagen_5,
+            "slider" => $newArray,
+            "artesanalBackground" => $artesanalBackground,
+            "Titulo_1" => $Titulo_1,
+            "fondso_salud" => $fondso_salud,
+            "banner_video" => $banner_video,
+            "text_factores" => $text_factores,
+            "ancestral_slider_" => $ancestral_slider_,
+            "ancestral_slider_99" => $ancestral_slider_99,
+            "evidencia_cientificac" => $evidencia_cientificac,
+            "artesanal-title" => $artesanal_title
+        );
+
+        return $pacientesContent;
     }
 }

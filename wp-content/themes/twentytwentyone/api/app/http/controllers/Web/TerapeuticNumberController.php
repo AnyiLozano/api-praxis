@@ -93,6 +93,7 @@ class TerapeuticNumberController extends Controller
         $hemorroidal_background_1 = ContentPage::where("section", "hemorroidal-background-1")->wherePageId(2)->whereStatusId(1)->first();
         $hemorroidal_background_referencias = ContentPage::where("section", "hemorroidal-background-referencias")->wherePageId(2)->whereStatusId(1)->first();
         $hemorroidal_background_p = ContentPage::where("section", "hemorroidal-background-p")->wherePageId(2)->whereStatusId(1)->first();
+        $artesanal_title = ContentPage::where("section", "artesanal-title")->wherePageId(2)->whereStatusId(1)->first();
         
         $newArray = array(
             array(
@@ -221,7 +222,8 @@ class TerapeuticNumberController extends Controller
             "hemorroidal_text_1" => $hemorroidal_text_1,
             "hemorroidal_content" => $newArray,
             "hemorroidal_background_referencias" => $hemorroidal_background_referencias,
-            "hemorroidal-background-p" => $hemorroidal_background_p
+            "hemorroidal-background-p" => $hemorroidal_background_p,
+            "artesanal_title" => $artesanal_title
         );
 
         return $this->response(true, ['type' => 'success', 'content' => 'Done.'], $newArray);

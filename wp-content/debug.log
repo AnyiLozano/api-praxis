@@ -1,0 +1,9 @@
+[11-Mar-2022 13:01:34 UTC] PHP Notice:  Undefined index: Navbar in D:\laragon\www\api-praxis\wp-content\themes\twentytwentyone\api\app\http\controllers\Web\HomeController.php on line 22
+[11-Mar-2022 13:01:51 UTC] PHP Notice:  Undefined index: primary-menu in D:\laragon\www\api-praxis\wp-content\themes\twentytwentyone\api\app\http\controllers\Web\HomeController.php on line 22
+[11-Mar-2022 13:02:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wp_get_nav_menu_items(), 0 passed in D:\laragon\www\api-praxis\wp-content\themes\twentytwentyone\api\app\http\controllers\Web\HomeController.php on line 21 and at least 1 expected in D:\laragon\www\api-praxis\wp-includes\nav-menu.php:687
+Stack trace:
+#0 D:\laragon\www\api-praxis\wp-content\themes\twentytwentyone\api\app\http\controllers\Web\HomeController.php(21): wp_get_nav_menu_items()
+#1 D:\laragon\www\api-praxis\wp-includes\rest-api\class-wp-rest-server.php(1141): App\Http\Controllers\Web\HomeController->getMenus(Object(WP_REST_Request))
+#2 D:\laragon\www\api-praxis\wp-includes\rest-api\class-wp-rest-server.php(988): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/complements/ge...', Array, NULL)
+#3 D:\laragon\www\api-praxis\wp-includes\rest-api\class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 D:\laragon\www\api-praxis\wp-includes\rest-api.php(386): WP_REST_Server->serve_request('/complements/ge...' in D:\laragon\www\api-praxis\wp-includes\nav-menu.php on line 687
