@@ -23,7 +23,7 @@ class ProductsController extends Controller
             $contentHome->type_content_id = $request["type"];
             $contentHome->section = $request["section"];
             if ($request['type'] == 1) {
-                $contentHome->content = $request->content;
+                $contentHome->content = $request['content'];
             } else {
                 $contentHome->content = $this->uploadImages($request->get_file_params("content")["content"]);
             }
