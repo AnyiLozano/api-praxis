@@ -34,7 +34,7 @@ class ProductsController extends Controller
         $fuente_image = ContentPage::where("section", "producto_imagen-2")->whereStatusId(1)->first();
         $contraindicaciones = ContentPage::where("section", "producto-imagen-3")->whereStatusId(1)->first();
         $precauciones = ContentPage::where("section", "producto-imagen-4")->whereStatusId(1)->first();
-        $info_prescribir = ContentPage::where("section", "producto-imagene-4")->whereStatusId(1)->first();
+        $info_prescribir = ContentPage::where("section", "producto-imagene-44")->whereStatusId(1)->first();
         $info_prescribir_image = ContentPage::where("section", "producto-imagen-5")->whereStatusId(1)->first();
         $categoria_text = ContentPage::where("section", "product_text-41")->whereStatusId(1)->first();
         $table_category = ContentPage::where("section", "producto-imagen-6")->whereStatusId(1)->first();
@@ -48,7 +48,7 @@ class ProductsController extends Controller
         $aplicacion_para = ContentPage::where("section", "product_text-7")->whereStatusId(1)->first();
         $conditions = ContentPage::where("section", "LIKE", "%imagen-part%")->whereStatusId(1)->get();
         $almacenamiento = ContentPage::where("section", "producto-imagen-13")->whereStatusId(1)->first();
-        $almacenamiento2 = ContentPage::where("section", "producto-imagen-133")->whereStatusId(1)->first();
+        $almacenamiento2 = ContentPage::where("section", "producto-imagen-13")->whereStatusId(1)->first();
         $final = ContentPage::where("section", "LIKE", "%producto-imagen-final%")->whereStatusId(1)->get();
 
         $epiprotArray = array(
