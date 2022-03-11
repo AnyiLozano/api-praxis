@@ -58,7 +58,84 @@ class TerapeuticNumberController extends Controller
         $ulceras_imagen_10 = ContentPage::where("section", "ulceras-imagen-10")->wherePageId(2)->whereStatusId(1)->first();
         $ulceras_refrencias_1 = ContentPage::where("section", "ulceras-refrencias-1")->wherePageId(2)->whereStatusId(1)->first();
 
+        /** Diabetes */
+        $diabetes_banner_1 = ContentPage::where("section", "diabetes-banner-1")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_background_1 = ContentPage::where("section", "diabetes-background-1")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_text_1 = ContentPage::where("section", "diabetes-text-1")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_cuadro = ContentPage::where("section", "LIKE","%diabetes-cuadro%")->wherePageId(2)->whereStatusId(1)->get();
+        $diabetes_titulo_2 = ContentPage::where("section", "diabetes-titulo-2")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_text_2 = ContentPage::where("section", "diabetes-text-2")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_1 = ContentPage::where("section", "diabetes-imagen-1")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_cuadrose = ContentPage::where("section", "LIKE","%diabetes-cuadse%")->wherePageId(2)->whereStatusId(1)->get();
+        $diabetes_imagen_2 = ContentPage::where("section", "diabetes-imagen-2")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_4 = ContentPage::where("section", "diabetes-imagen-4")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_titulo_1 = ContentPage::where("section", "diabetes-titulo-1")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_titulo_3 = ContentPage::where("section", "diabetes-titulo-3")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_background_2 = ContentPage::where("section", "diabetes-background-2")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_titulo_4 = ContentPage::where("section", "diabetes-titulo-4")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_text_3 = ContentPage::where("section", "diabetes-text-3")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_5 = ContentPage::where("section", "diabetes-imagen-5")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_titulo_5 = ContentPage::where("section", "diabetes-titulo-5")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_text_4 = ContentPage::where("section", "diabetes-text-4")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_6 = ContentPage::where("section", "diabetes-imagen-6")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_text_5 = ContentPage::where("section", "diabetes-text-5")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_7 = ContentPage::where("section", "diabetes-imagen-7")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_images_8 = ContentPage::where("section", "diabetes-images-8")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_9 = ContentPage::where("section", "diabetes-imagen-9")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_titulo_6 = ContentPage::where("section", "diabetes-titulo-6")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_10 = ContentPage::where("section", "diabetes-imagen-10")->wherePageId(2)->whereStatusId(1)->first();
+        $diabetes_imagen_11 = ContentPage::where("section", "diabetes-imagen-11")->wherePageId(2)->whereStatusId(1)->first();
 
+        /** Hemorroidal */
+        $hemorroidal_banner_1 = ContentPage::where("section", "hemorroidal-banner-1")->wherePageId(2)->whereStatusId(1)->first();
+        $hemorroidal_background_1 = ContentPage::where("section", "hemorroidal-background-1")->wherePageId(2)->whereStatusId(1)->first();
+        $hemorroidal_text_1 = ContentPage::where("section", "hemorroidal-text-1")->wherePageId(2)->whereStatusId(1)->first();
+        $hemorroidal_background_1 = ContentPage::where("section", "hemorroidal-background-1")->wherePageId(2)->whereStatusId(1)->first();
+        $hemorroidal_background_referencias = ContentPage::where("section", "hemorroidal-background-referencias")->wherePageId(2)->whereStatusId(1)->first();
+        $hemorroidal_background_p = ContentPage::where("section", "hemorroidal-background-p")->wherePageId(2)->whereStatusId(1)->first();
+        
+        $newArray = array(
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo-1")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-text-2")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-1")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo-2")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-texto-2")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-2")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo -3")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-text-3")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-3")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo -4")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-texto -4")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-4")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo -5")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-texto-5")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-6")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo -4")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-texto -4")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-8")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo -6")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-texto-6")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-9")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+            array(
+                "title" => ContentPage::where("section", "hemorroidal-titulo -7")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "description" => ContentPage::where("section", "hemorroidal-texto-7")->wherePageId(2)->whereStatusId(1)->first()["content"],
+                "image" => ContentPage::where("section", "hemorroidal-imagen-10")->wherePageId(2)->whereStatusId(1)->first()["content"]
+            ),
+        );
         
         $newArray = array(
             "principal_banner" => $banner,
@@ -108,7 +185,43 @@ class TerapeuticNumberController extends Controller
             "ulceras_text_8" => $ulceras_text_8,
             "ulceras_imagen_9" => $ulceras_imagen_9,
             "ulceras_imagen_10" => $ulceras_imagen_10,
-            "ulceras_refrencias_1" => $ulceras_refrencias_1
+            "ulceras_refrencias_1" => $ulceras_refrencias_1,
+
+            /** Diabletes */
+            "diabetes_banner_1" => $diabetes_banner_1,
+            "diabetes_background_1" => $diabetes_background_1,
+            "diabetes_text_1" => $diabetes_text_1,
+            "diabetes_cuadro" => $diabetes_cuadro,
+            "diabetes_titulo_2" => $diabetes_titulo_2,
+            "diabetes_text_2" => $diabetes_text_2,
+            "diabetes_imagen_1" => $diabetes_imagen_1,
+            "diabetes_cuadrose" => $diabetes_cuadrose,
+            "diabetes_image_2" => $diabetes_imagen_2,
+            "diabetes_titulo_1" => $diabetes_titulo_1,
+            "diabetes_titulo_3" => $diabetes_titulo_3,
+            "diabetes_imagen_4" => $diabetes_imagen_4,
+            "diabetes_background_2" => $diabetes_background_2,
+            "diabetes_titulo_4" => $diabetes_titulo_4,
+            "diabetes_text_3" => $diabetes_text_3,
+            "diabetes_imagen_5" => $diabetes_imagen_5,
+            "diabetes_text_4" => $diabetes_text_4,
+            "diabetes_imagen_6" => $diabetes_imagen_6,
+            "diabetes_titulo_5" => $diabetes_titulo_5,
+            "diabetes_text_5" => $diabetes_text_5,
+            "diabetes_imagen_7" => $diabetes_imagen_7,
+            "diabetes_images_8" => $diabetes_images_8,
+            "diabetes_imagen_9" => $diabetes_imagen_9,
+            "diabetes_titulo_6" => $diabetes_titulo_6,
+            "diabetes_imagen_10" => $diabetes_imagen_10,
+            "diabetes_imagen_11" => $diabetes_imagen_11,
+
+            /** Hemorroidal */
+            "hemorroidal_banner_1" => $hemorroidal_banner_1,
+            "hemorroidal_background_1" => $hemorroidal_background_1,
+            "hemorroidal_text_1" => $hemorroidal_text_1,
+            "hemorroidal_content" => $newArray,
+            "hemorroidal_background_referencias" => $hemorroidal_background_referencias,
+            "hemorroidal-background-p" => $hemorroidal_background_p
         );
 
         return $this->response(true, ['type' => 'success', 'content' => 'Done.'], $newArray);
