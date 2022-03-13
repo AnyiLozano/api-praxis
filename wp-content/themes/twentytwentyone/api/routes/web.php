@@ -6,18 +6,21 @@ require dirname(__DIR__) . "/app/Http/Controllers/Web/HomeController.php";
 require dirname(__DIR__) . "/app/Http/Controllers/Web/TerapeuticNumberController.php";
 require dirname(__DIR__) . "/app/Http/Controllers/AuthController.php";
 require dirname(__DIR__) . "/app/Http/Controllers/Web/ProductsController.php";
+require dirname(__DIR__) . "/app/Http/Controllers/Web/BlogController.php";
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Web\BlogController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\ProductsController;
 use App\Http\Controllers\Web\TerapeuticNumberController;
 
 class RoutesWeb
 {
-    public $home = null;
-    public $terapeutic_number = null;
-    public $auth = null;
-    public $products = null;
+    public ?HomeController $home = null;
+    public ?TerapeuticNumberController $terapeutic_number = null;
+    public ?AuthController $auth = null;
+    public ?ProductsController $products = null;
+    public ?BlogController $blog = null;
 
     public function __construct()
     {
@@ -35,6 +38,7 @@ class RoutesWeb
         $this->terapeutic_number = new TerapeuticNumberController;
         $this->auth = new AuthController;
         $this->products = new ProductsController;
+        $this->blog = new BlogController();
     }
 
     public function configRoutes()
@@ -42,6 +46,7 @@ class RoutesWeb
         $this->homeRoutes();
         $this->terapeuticNumberRoutes();
         $this->authRoutes();
+        $this->blogRoutes();
     }
 
     public function homeRoutes()
@@ -100,6 +105,14 @@ class RoutesWeb
         register_rest_route('products', 'get-assets', array(
             'methods' => 'GET',
             'callback' => array($this->products, 'productsAssets')
+        ));
+    }
+
+    public function blogRoutes()
+    {
+        register_rest_route("blogs", "get-blog-posts", array(
+           "methods" => "GET",
+           "callback" => array($this->blog, "getEntriesBlog")
         ));
     }
 }
