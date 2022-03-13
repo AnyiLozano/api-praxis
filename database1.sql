@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `content_pages` (
   CONSTRAINT `content_pages_type_content_id_foreign` FOREIGN KEY (`type_content_id`) REFERENCES `type_contents` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=244 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla praxis.content_pages: ~230 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.content_pages: ~233 rows (aproximadamente)
 DELETE FROM `content_pages`;
 /*!40000 ALTER TABLE `content_pages` DISABLE KEYS */;
 INSERT INTO `content_pages` (`id`, `page_id`, `type_content_id`, `content`, `alt`, `section`, `status_id`, `created_at`, `updated_at`) VALUES
@@ -271,11 +271,11 @@ INSERT INTO `content_pages` (`id`, `page_id`, `type_content_id`, `content`, `alt
 	(240, 4, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/tabla.png', 'tabla', 'ancestral_slider_99', 1, '2022-03-11 07:57:21', '2022-03-11 15:14:21'),
 	(241, 4, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/fodno_visitas.png', 'evidenica cientifica', 'fondso_salud', 1, '2022-03-11 07:58:45', '2022-03-11 07:59:45'),
 	(242, 4, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/lorem.png', 'cientifica', 'evidencia_cientificac', 1, '2022-03-11 08:01:14', '2022-03-11 08:01:14'),
-	(243, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blog.png', 'Blog principal', 'blog_banner_principal', 1, '2022-03-13 01:50:06', '2022-03-13 01:50:06'),
-	(244, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/Recurso 2.png', 'fondo blog', 'fondo_blog_banner', 1, '2022-03-13 03:56:13', '2022-03-13 03:56:13'),
-	(245, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blog2.png', 'fondo blog 2', 'fondo_blog_banner_2', 1, '2022-03-13 04:02:18', '2022-03-13 04:02:18'),
-	(246, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blog3.png', 'fondo blog 3', 'fondo_blog_banner_3', 1, '2022-03-13 04:02:48', '2022-03-13 04:02:48'),
-	(247, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blgo4.png', 'fondo blog 4', 'fondo_blog_banner_4', 1, '2022-03-13 04:03:17', '2022-03-13 04:03:17');
+	(243, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blog banner.png', 'Blog principal', 'blog_banner_principal', 1, '2022-03-13 01:50:06', '2022-03-13 04:13:13'),
+	(244, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blog.png', 'fondo blog', 'fondo_blog_banner', 1, '2022-03-13 03:56:13', '2022-03-13 04:12:01'),
+	(245, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blgo2.png', 'fondo blog 2', 'fondo_blog_banner_2', 1, '2022-03-13 04:02:18', '2022-03-13 04:13:28'),
+	(246, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blog33.png', 'fondo blog 3', 'fondo_blog_banner_3', 1, '2022-03-13 04:02:48', '2022-03-13 04:14:21'),
+	(247, 1, 2, 'http://api-praxis.test/wp-content/uploads/2022/03/blog44.png', 'fondo blog 4', 'fondo_blog_banner_4', 1, '2022-03-13 04:03:17', '2022-03-13 04:14:41');
 /*!40000 ALTER TABLE `content_pages` ENABLE KEYS */;
 
 -- Dumping structure for table praxis.failed_jobs
@@ -641,7 +641,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 	(102, 'WPLANG', 'es_CO', 'yes'),
 	(103, 'widget_block', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(104, 'sidebars_widgets', 'a:3:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:5:{i:0;s:7:"block-2";i:1;s:7:"block-3";i:2;s:7:"block-4";i:3;s:7:"block-5";i:4;s:7:"block-6";}s:13:"array_version";i:3;}', 'yes'),
-	(105, 'cron', 'a:7:{i:1647144813;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1647155613;a:4:{s:18:"wp_https_detection";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1647198829;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1647198830;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1647203361;a:1:{s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1647544413;a:1:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}}s:7:"version";i:2;}', 'yes'),
+	(105, 'cron', 'a:7:{i:1647148413;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1647155613;a:4:{s:18:"wp_https_detection";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1647198829;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1647198830;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1647203361;a:1:{s:32:"recovery_mode_clean_expired_keys";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1647544413;a:1:{s:30:"wp_site_health_scheduled_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"weekly";s:4:"args";a:0:{}s:8:"interval";i:604800;}}}s:7:"version";i:2;}', 'yes'),
 	(106, 'widget_pages', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(107, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 	(108, 'widget_archives', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
@@ -712,7 +712,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   KEY `meta_key` (`meta_key`(191))
 ) ENGINE=InnoDB AUTO_INCREMENT=583 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_postmeta: ~557 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_postmeta: ~563 rows (aproximadamente)
 DELETE FROM `wp_postmeta`;
 /*!40000 ALTER TABLE `wp_postmeta` DISABLE KEYS */;
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -1214,7 +1214,23 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 	(587, 264, '_wp_attached_file', '2022/03/blog3.png'),
 	(588, 264, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:288;s:6:"height";i:175;s:4:"file";s:17:"2022/03/blog3.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:17:"blog3-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 	(589, 265, '_wp_attached_file', '2022/03/blgo4.png'),
-	(590, 265, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:288;s:6:"height";i:175;s:4:"file";s:17:"2022/03/blgo4.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:17:"blgo4-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
+	(590, 265, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:288;s:6:"height";i:175;s:4:"file";s:17:"2022/03/blgo4.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:17:"blgo4-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(591, 266, '_wp_attached_file', '2022/03/blog.png'),
+	(592, 266, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:62;s:6:"height";i:37;s:4:"file";s:16:"2022/03/blog.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(593, 267, '_wp_attached_file', '2022/03/blog banner.png'),
+	(594, 267, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1920;s:6:"height";i:1080;s:4:"file";s:23:"2022/03/blog banner.png";s:5:"sizes";a:6:{s:6:"medium";a:4:{s:4:"file";s:23:"blog banner-300x169.png";s:5:"width";i:300;s:6:"height";i:169;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:24:"blog banner-1024x576.png";s:5:"width";i:1024;s:6:"height";i:576;s:9:"mime-type";s:9:"image/png";}s:9:"thumbnail";a:4:{s:4:"file";s:23:"blog banner-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:23:"blog banner-768x432.png";s:5:"width";i:768;s:6:"height";i:432;s:9:"mime-type";s:9:"image/png";}s:9:"1536x1536";a:4:{s:4:"file";s:24:"blog banner-1536x864.png";s:5:"width";i:1536;s:6:"height";i:864;s:9:"mime-type";s:9:"image/png";}s:14:"post-thumbnail";a:4:{s:4:"file";s:24:"blog banner-1568x882.png";s:5:"width";i:1568;s:6:"height";i:882;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(595, 268, '_wp_attached_file', '2022/03/blgo2.png'),
+	(596, 268, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:61;s:6:"height";i:37;s:4:"file";s:17:"2022/03/blgo2.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(597, 269, '_wp_attached_file', '2022/03/blog3.png'),
+	(598, 269, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:62;s:6:"height";i:37;s:4:"file";s:17:"2022/03/blog3.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(599, 270, '_wp_attached_file', '2022/03/blog3.png'),
+	(600, 270, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:62;s:6:"height";i:37;s:4:"file";s:17:"2022/03/blog3.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(601, 271, '_wp_attached_file', '2022/03/blog33.png'),
+	(602, 271, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:62;s:6:"height";i:37;s:4:"file";s:18:"2022/03/blog33.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(603, 272, '_wp_attached_file', '2022/03/blog44.png'),
+	(604, 272, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:62;s:6:"height";i:37;s:4:"file";s:18:"2022/03/blog44.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+	(605, 273, '_wp_attached_file', '2022/03/blog44.png'),
+	(606, 273, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:62;s:6:"height";i:37;s:4:"file";s:18:"2022/03/blog44.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 
 -- Dumping structure for table praxis.wp_posts
@@ -1250,7 +1266,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `post_author` (`post_author`)
 ) ENGINE=InnoDB AUTO_INCREMENT=262 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
--- Volcando datos para la tabla praxis.wp_posts: ~253 rows (aproximadamente)
+-- Volcando datos para la tabla praxis.wp_posts: ~256 rows (aproximadamente)
 DELETE FROM `wp_posts`;
 /*!40000 ALTER TABLE `wp_posts` DISABLE KEYS */;
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -1501,7 +1517,15 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 	(262, 0, '2022-03-12 22:56:13', '2022-03-13 03:56:13', '', 'Recurso 2', '', 'inherit', 'open', 'closed', '', 'recurso-2-3', '', '', '2022-03-12 22:56:13', '2022-03-13 03:56:13', '', 0, 'http://api-praxis.test/recurso-2-3/', 0, 'attachment', 'image/png', 0),
 	(263, 0, '2022-03-12 23:02:18', '2022-03-13 04:02:18', '', 'blog2', '', 'inherit', 'open', 'closed', '', 'blog2', '', '', '2022-03-12 23:02:18', '2022-03-13 04:02:18', '', 0, 'http://api-praxis.test/blog2/', 0, 'attachment', 'image/png', 0),
 	(264, 0, '2022-03-12 23:02:48', '2022-03-13 04:02:48', '', 'blog3', '', 'inherit', 'open', 'closed', '', 'blog3', '', '', '2022-03-12 23:02:48', '2022-03-13 04:02:48', '', 0, 'http://api-praxis.test/blog3/', 0, 'attachment', 'image/png', 0),
-	(265, 0, '2022-03-12 23:03:17', '2022-03-13 04:03:17', '', 'blgo4', '', 'inherit', 'open', 'closed', '', 'blgo4', '', '', '2022-03-12 23:03:17', '2022-03-13 04:03:17', '', 0, 'http://api-praxis.test/blgo4/', 0, 'attachment', 'image/png', 0);
+	(265, 0, '2022-03-12 23:03:17', '2022-03-13 04:03:17', '', 'blgo4', '', 'inherit', 'open', 'closed', '', 'blgo4', '', '', '2022-03-12 23:03:17', '2022-03-13 04:03:17', '', 0, 'http://api-praxis.test/blgo4/', 0, 'attachment', 'image/png', 0),
+	(266, 0, '2022-03-12 23:12:01', '2022-03-13 04:12:01', '', 'blog', '', 'inherit', 'open', 'closed', '', 'blog-3', '', '', '2022-03-12 23:12:01', '2022-03-13 04:12:01', '', 0, 'http://api-praxis.test/blog-3/', 0, 'attachment', 'image/png', 0),
+	(267, 0, '2022-03-12 23:13:11', '2022-03-13 04:13:11', '', 'blog banner', '', 'inherit', 'open', 'closed', '', 'blog-banner', '', '', '2022-03-12 23:13:11', '2022-03-13 04:13:11', '', 0, 'http://api-praxis.test/blog-banner/', 0, 'attachment', 'image/png', 0),
+	(268, 0, '2022-03-12 23:13:28', '2022-03-13 04:13:28', '', 'blgo2', '', 'inherit', 'open', 'closed', '', 'blgo2', '', '', '2022-03-12 23:13:28', '2022-03-13 04:13:28', '', 0, 'http://api-praxis.test/blgo2/', 0, 'attachment', 'image/png', 0),
+	(269, 0, '2022-03-12 23:13:39', '2022-03-13 04:13:39', '', 'blog3', '', 'inherit', 'open', 'closed', '', 'blog3-2', '', '', '2022-03-12 23:13:39', '2022-03-13 04:13:39', '', 0, 'http://api-praxis.test/blog3-2/', 0, 'attachment', 'image/png', 0),
+	(270, 0, '2022-03-12 23:13:51', '2022-03-13 04:13:51', '', 'blog3', '', 'inherit', 'open', 'closed', '', 'blog3-3', '', '', '2022-03-12 23:13:51', '2022-03-13 04:13:51', '', 0, 'http://api-praxis.test/blog3-3/', 0, 'attachment', 'image/png', 0),
+	(271, 0, '2022-03-12 23:14:21', '2022-03-13 04:14:21', '', 'blog33', '', 'inherit', 'open', 'closed', '', 'blog33', '', '', '2022-03-12 23:14:21', '2022-03-13 04:14:21', '', 0, 'http://api-praxis.test/blog33/', 0, 'attachment', 'image/png', 0),
+	(272, 0, '2022-03-12 23:14:41', '2022-03-13 04:14:41', '', 'blog44', '', 'inherit', 'open', 'closed', '', 'blog44', '', '', '2022-03-12 23:14:41', '2022-03-13 04:14:41', '', 0, 'http://api-praxis.test/blog44/', 0, 'attachment', 'image/png', 0),
+	(273, 0, '2022-03-12 23:14:45', '2022-03-13 04:14:45', '', 'blog44', '', 'inherit', 'open', 'closed', '', 'blog44-2', '', '', '2022-03-12 23:14:45', '2022-03-13 04:14:45', '', 0, 'http://api-praxis.test/blog44-2/', 0, 'attachment', 'image/png', 0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 
 -- Volcando estructura para tabla praxis.wp_termmeta
