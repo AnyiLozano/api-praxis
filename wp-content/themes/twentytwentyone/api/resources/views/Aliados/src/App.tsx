@@ -45,7 +45,7 @@ const App = () => {
                                         <td>{item.type_content.name}</td>
                                         <td>
                                             {
-                                                item.type_content_id === 1 ? (
+                                                item.type_content.name === "Text" ? (
                                                     <span>{item.content}</span>
                                                 ) : (
                                                     <img

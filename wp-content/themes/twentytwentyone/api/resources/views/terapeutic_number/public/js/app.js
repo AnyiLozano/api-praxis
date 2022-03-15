@@ -10507,7 +10507,7 @@ var App = function App() {
   }, react_1["default"].createElement("thead", null, react_1["default"].createElement("tr", null, react_1["default"].createElement("th", null, "Id"), react_1["default"].createElement("th", null, "Pagina"), react_1["default"].createElement("th", null, "Secci\xF3n"), react_1["default"].createElement("th", null, "Tipo de contenido"), react_1["default"].createElement("th", null, "Contenido"), react_1["default"].createElement("th", null, "Alias"), react_1["default"].createElement("th", null, "Estado"), react_1["default"].createElement("th", null, "Opciones"))), react_1["default"].createElement("tbody", null, contents && contents.map(function (item, key) {
     return react_1["default"].createElement("tr", {
       key: key
-    }, react_1["default"].createElement("td", null, item.id), react_1["default"].createElement("td", null, item.page.name), react_1["default"].createElement("td", null, item.section), react_1["default"].createElement("td", null, item.type_content.name), react_1["default"].createElement("td", null, item.type_content_id === 1 ? react_1["default"].createElement("span", null, item.content) : react_1["default"].createElement("img", {
+    }, react_1["default"].createElement("td", null, item.id), react_1["default"].createElement("td", null, item.page.name), react_1["default"].createElement("td", null, item.section), react_1["default"].createElement("td", null, item.type_content.name), react_1["default"].createElement("td", null, item.type_content.name === "Text" ? react_1["default"].createElement("span", null, item.content) : react_1["default"].createElement("img", {
       src: item.content,
       alt: "content",
       style: {
@@ -10612,7 +10612,7 @@ var useCreateContent = function useCreateContent() {
 
 
   var getTypeContents = function getTypeContents() {
-    axios_1["default"].get("http://api-praxis.test/wp-json/admin/home/get-content-types").then(function (res) {
+    axios_1["default"].get("http://api-praxis.eml.com.co/wp-json/admin/home/get-content-types").then(function (res) {
       var data = res.data.data;
       var types = data.map(function (item) {
         return Object.assign(Object.assign({}, item), {
@@ -10634,7 +10634,7 @@ var useCreateContent = function useCreateContent() {
       formData.append("page", "2");
       formData.append("type", data.type_content.id);
       formData.append("section", data.section);
-      axios_1["default"].post("http://api-praxis.test/wp-json/admin/terapeutic-number/create-terapeutic-number-contents", formData).then(function (res) {
+      axios_1["default"].post("http://api-praxis.eml.com.co/wp-json/admin/terapeutic-number/create-terapeutic-number-contents", formData).then(function (res) {
         var transaction = res.data.transaction;
 
         if (transaction.status === true) {
@@ -11036,7 +11036,7 @@ var useEditContent = function useEditContent() {
       formData.append("id", data.id);
     }
 
-    axios_1["default"].post("http://api-praxis.test/wp-json/admin/terapeutic-number/edit-terapeutic-number-contents", formData).then(function (res) {
+    axios_1["default"].post("http://api-praxis.eml.com.co/wp-json/admin/terapeutic-number/edit-terapeutic-number-contents", formData).then(function (res) {
       var transaction = res.data.transaction;
 
       if (transaction.status === true) {
@@ -11455,7 +11455,7 @@ var useApp = function useApp() {
   };
 
   var getContents = function getContents() {
-    axios_1["default"].get("http://api-praxis.test/wp-json/admin/terapeutic-number/get-terapeutic-number-contents").then(function (res) {
+    axios_1["default"].get("http://api-praxis.eml.com.co/wp-json/admin/terapeutic-number/get-terapeutic-number-contents").then(function (res) {
       setContents(res.data.data);
     })["catch"](function (err) {
       console.log(err);
@@ -11463,7 +11463,7 @@ var useApp = function useApp() {
   };
 
   var changeStatus = function changeStatus(id) {
-    axios_1["default"].post("http://api-praxis.test/wp-json/admin/terapeutic-number/change-status", {
+    axios_1["default"].post("http://api-praxis.eml.com.co/wp-json/admin/terapeutic-number/change-status", {
       id: id
     }).then(function (res) {
       var transaction = res.data.transaction;

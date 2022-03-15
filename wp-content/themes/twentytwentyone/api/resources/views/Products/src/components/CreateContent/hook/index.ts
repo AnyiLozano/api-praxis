@@ -15,7 +15,7 @@ const useCreateContent = () => {
 
     /** Handlers */
     const getTypeContents = () => {
-        axios.get("http://api-praxis.test/wp-json/admin/home/get-content-types")
+        axios.get("http://api-praxis.eml.com.co/wp-json/admin/home/get-content-types")
             .then((res: any) => {
                 const { data } = res.data;
                 const types = data.map((item: any) => {

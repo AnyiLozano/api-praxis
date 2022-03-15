@@ -15,7 +15,7 @@ const useCreateContent = () => {
 
     /** Handlers */
     const getTypeContents = () => {
-        axios.get("http://api-praxis.test/wp-json/admin/home/get-content-types")
+        axios.get("http://api-praxis.eml.com.co/wp-json/admin/home/get-content-types")
             .then((res: any) => {
                 const { data } = res.data;
                 const types = data.map((item: any) => {
@@ -36,7 +36,7 @@ const useCreateContent = () => {
             formData.append("type", data.type_content.id);
             formData.append("section", data.section);
 
-            axios.post("http://api-praxis.test/wp-json/admin/terapeutic-number/create-terapeutic-number-contents", formData)
+            axios.post("http://api-praxis.eml.com.co/wp-json/admin/terapeutic-number/create-terapeutic-number-contents", formData)
                 .then((res) => {
                     const { transaction } = res.data;
                     if (transaction.status === true) {

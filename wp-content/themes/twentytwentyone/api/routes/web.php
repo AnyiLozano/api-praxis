@@ -49,6 +49,13 @@ class RoutesWeb
         $this->blogRoutes();
     }
 
+    public function createRoutes($args)
+    {
+        foreach ($args as $value){
+            register_rest_route($value->prefix, $value->route, $value->args);
+        }
+    }
+
     public function homeRoutes()
     {
         register_rest_route('complements', 'get-logo', array(
@@ -113,6 +120,21 @@ class RoutesWeb
         register_rest_route("blogs", "get-blog-posts", array(
            "methods" => "GET",
            "callback" => array($this->blog, "getEntriesBlog")
+        ));
+
+        register_rest_route("blogs", "get-assets", array(
+           "methods" => "GET",
+           "callback" => array($this->blog, "getAssets")
+        ));
+
+        register_rest_route("blogs", "get-recent-posts", array(
+            "methods" => "GET",
+            "callback" => array($this->blog, "getRecentPosts")
+        ));
+
+        register_rest_route("blogs", "get-posts", array(
+            "methods" => "GET",
+            "callback" => array($this->blog, "getPosts")
         ));
     }
 }

@@ -24,7 +24,7 @@ const useApp = () => {
     const closeModalEdit = () => setShowModalEdit(false);
 
     const getContents = () => {
-        axios.get("http://api-praxis.test/wp-json/admin/products/get-products-contents")
+        axios.get("http://api-praxis.eml.com.co/wp-json/admin/products/get-products-contents")
             .then((res) => {
                 setContents(res.data.data);
             }).catch((err) => {
@@ -33,7 +33,7 @@ const useApp = () => {
     }
 
     const changeStatus = (id: number) => {
-        axios.post("http://api-praxis.test/wp-json/admin/products/change-status", {id})
+        axios.post("http://api-praxis.eml.com.co/wp-json/admin/products/change-status", {id})
         .then((res) => {
             const { transaction } = res.data;
             if(transaction.status === true){

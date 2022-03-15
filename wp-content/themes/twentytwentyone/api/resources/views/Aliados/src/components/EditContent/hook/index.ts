@@ -32,8 +32,8 @@ const useEditContent = () => {
             formData.append("id", data.id);
         }
 
-        axios.post("http://api-praxis.test/wp-json/admin/Aliados/edit-Aliados-contents", formData)
-            .then((res) => {
+        axios.post("http://api-praxis.eml.com.co/wp-json/admin/Aliados/edit-Aliados-contents", formData)
+            .then((res: any) => {
                 const { transaction } = res.data;
                 if (transaction.status === true) {
                     setShowModalEdit(false);
@@ -41,7 +41,7 @@ const useEditContent = () => {
                 } else {
                     alert("ocurrio un problema al momento de editar el contenido.");
                 }
-            }).catch((err) => {
+            }).catch((err: any) => {
                 console.log(err);
             })
     }

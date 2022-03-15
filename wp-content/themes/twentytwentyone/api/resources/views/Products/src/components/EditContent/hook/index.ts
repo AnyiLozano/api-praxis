@@ -32,7 +32,7 @@ const useEditContent = () => {
             formData.append("id", data.id);
         }
 
-        axios.post("http://api-praxis.test/wp-json/admin/products/edit-products-contents", formData)
+        axios.post("http://api-praxis.eml.com.co/wp-json/admin/products/edit-products-contents", formData)
             .then((res) => {
                 const { transaction } = res.data;
                 if (transaction.status === true) {
