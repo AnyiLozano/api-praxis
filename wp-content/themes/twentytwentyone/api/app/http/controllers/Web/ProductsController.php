@@ -22,6 +22,7 @@ class ProductsController extends Controller
     public function epiprotContent()
     {
         $principal_banner = ContentPage::where("section", "Epiprot")->whereStatusId(1)->first();
+        $banner_1 = ContentPage::where("section", "products_banner_1")->whereStatusId(1)->first();
         $background_description = ContentPage::where("section", "products_background")->whereStatusId(1)->first();
         $title_description = ContentPage::where("section", "Product_Epiprot")->whereStatusId(1)->first();
         $text_description = ContentPage::where("section", "producto_epiprot_texto_1")->whereStatusId(1)->first();
@@ -80,7 +81,8 @@ class ProductsController extends Controller
             "conditions" => $conditions,
             "almacenamiento" => $almacenamiento,
             "almacenamiento2" => $almacenamiento2,
-            "final" => $final
+            "final" => $final,
+            "banner_1" => $banner_1
         );
 
         return $epiprotArray;
